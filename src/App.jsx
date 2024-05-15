@@ -3,8 +3,9 @@ import axios from 'axios';
 import { Top } from './components/Top';
 import { Speak } from './components/Speak';
 import { NavBar } from './components/NavBar';
- 
-     
+import { ImageText } from './components/ImageText';
+
+
 
 export default function App() {
 
@@ -37,6 +38,7 @@ export default function App() {
     async function get_data() {
 
       try {
+
         const response = await axios.request(options);
         // console.log("1", response.data);
         // console.log("2", response.data.choices);
@@ -64,6 +66,7 @@ export default function App() {
       <NavBar input={input}></NavBar>
       <Top message={res} setInput={setInput}></Top>
       <Speak setInput={setInput} ></Speak>
+      <ImageText setInput={setInput}></ImageText>
     </div>
 
 
