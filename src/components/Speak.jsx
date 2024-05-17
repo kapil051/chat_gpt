@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useSpeechRecognition } from 'react-speech-kit';
 

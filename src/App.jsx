@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { NavBar } from './components/NavBar';
 import { Top } from './components/Top';
 import { Speak } from './components/Speak';
-import { NavBar } from './components/NavBar';
+import { Query } from './components/Query';
 import { ImageText } from './components/ImageText';
-
+import { Side } from './components/Side';
 
 
 export default function App() {
@@ -62,11 +63,36 @@ export default function App() {
 
   return (
 
-    <div>
-      <NavBar input={input}></NavBar>
-      <Top message={res} setInput={setInput}></Top>
-      <Speak setInput={setInput} ></Speak>
-      <ImageText setInput={setInput}></ImageText>
+    // <div className=' bg-gray-400 h-screen w-screen flex' >
+
+    //   <div>
+    //     <Side></Side>
+    //   </div>
+
+    //   <div>
+    //     <NavBar></NavBar>
+    //     <Query input={input}></Query>
+    //     <Top message={res} setInput={setInput}></Top>
+    //     <Speak setInput={setInput} ></Speak>
+    //     <ImageText setInput={setInput}></ImageText>
+    //   </div>
+
+    // </div>
+
+    <div className="bg-gray-400 h-screen w-screen flex">
+
+      <div className="flex-none w-1/5 resize-x overflow-auto bg-white">
+        <Side />
+      </div>
+
+      <div className="flex-1">
+        <NavBar />
+        <Query input={input} />
+        <Top message={res} setInput={setInput} />
+        <Speak setInput={setInput} />
+        <ImageText setInput={setInput} />
+      </div>
+      
     </div>
 
 

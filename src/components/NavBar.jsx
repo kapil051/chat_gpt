@@ -1,9 +1,12 @@
 
-export function NavBar({ input }) {
+import React from 'react';
+
+export function NavBar() {
     return (
-        <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white py-4 px-6 rounded-lg hover:shadow-xl transition duration-300 mb-2">
-            <div className="text-lg font-bold">Query:</div>
-            <div className="overflow-auto max-h-48">{input}</div>
+        <div className="flex items-center mb-2 justify-between h-16 bg-gray-600 text-white px-4 rounded-lg">
+            <h1 className="text-lg font-semibold">ChatMate</h1>
         </div>
     );
 }
+
+export default NavBar;

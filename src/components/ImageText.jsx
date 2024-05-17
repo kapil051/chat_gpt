@@ -27,10 +27,7 @@ export const ImageText = ({ setInput }) => {
     };
 
     return (
-        // <div className=''>
-        //   <input className='w-full  mt-2 ' type="file" onChange={handleImageChange} accept="image/*" />
-        // </div>
-
+    
         <div className='w-full mt-2'>
             <input className='w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:border-blue-500' type="file" onChange={handleImageChange} accept="image/*" />
         </div>
