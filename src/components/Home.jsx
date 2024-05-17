@@ -12,7 +12,7 @@ import { useEffect, useState } from 'react';
 export function Home(){
 
     const [res, setRes] = useState("hello from server");
-    const [input, setInput] = useState("hi i am human i needs your support to help me out with various problems!");
+    const [input, setInput] = useState("how can i help you!!!");
   
   
     const options = {
@@ -63,7 +63,7 @@ export function Home(){
 
        return (
 
-        <div className="bg-gray-400 h-screen w-screen flex">
+        <div className=" h-screen w-screen flex">
     
           <div className="flex-none w-1/5 resize-x overflow-auto bg-white">
             <Side />
