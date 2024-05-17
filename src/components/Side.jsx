@@ -20,7 +20,7 @@ export function Side() {
 
                 <div
                     className="mt-2 ml-7 p-2 bg-gray-100 rounded hover:bg-gray-300 cursor-pointer transition duration-300 ease-in-out flex items-center justify-center"
-                    onClick={() => window.location.href = '/target-page'}
+                    onClick={() => window.location.href = '/workflows'}
                 >
                    <img className=" h-4 mr-2" src="../src/images/workFlow.svg" alt="" />    Workflows
                 </div>
