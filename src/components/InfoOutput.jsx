@@ -23,6 +23,8 @@ export function InfoOutput({ input }) {
     return (
         <div >
 
+            <CompanyInfo input={input}></CompanyInfo>
+
             <div className="p-4">
 
                 <h2 className="text-xl font-bold mb-4">Summarize News {input}</h2>
@@ -37,9 +39,6 @@ export function InfoOutput({ input }) {
                 )}
 
             </div>
-
-
-           <CompanyInfo input={input}></CompanyInfo>
 
         </div>
     );

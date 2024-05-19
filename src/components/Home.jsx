@@ -7,12 +7,10 @@ import { Side } from './Side';
 import { useEffect, useState } from 'react';
 
 
-
-
 export function Home(){
 
-    const [res, setRes] = useState("hello from server");
-    const [input, setInput] = useState("how can i help you!!!");
+    const [res, setRes] = useState("hello from server!!");
+    const [input, setInput] = useState("type your query!!!");
   
   
     const options = {

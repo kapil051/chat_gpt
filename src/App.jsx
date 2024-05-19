@@ -11,7 +11,7 @@ export default function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/workflows" element={<Workflows />} />
-      <Route path="/workflows/try" element={<ComponyNor />} />
+      <Route path="/workflows/try" element={<ComponyNor/>} />
     </Routes>
   </div>
   );
