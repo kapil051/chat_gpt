@@ -41,7 +41,6 @@ export function InfoOutput({ input }) {
 
            <CompanyInfo input={input}></CompanyInfo>
 
-
         </div>
     );
 }
