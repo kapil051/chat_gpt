@@ -8,7 +8,7 @@ import { useState } from "react"
 
 export function ComponyNor() {
 
-         const [input,setInput]=useState("india");
+         const [input,setInput]=useState("India");
 
 
     return (
