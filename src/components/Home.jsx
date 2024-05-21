@@ -5,13 +5,15 @@ import { Query } from './Query';
 import { ImageText } from './ImageText';
 import { Side } from './Side';
 import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 
 export function Home(){
 
     const [res, setRes] = useState("hello from server!!");
     const [input, setInput] = useState("type your query!!!");
-  
+
+   // 79ae641156msha263db6ffee6e3ep195297jsn33ec6df2e5c9
   
     const options = {
       method: "POST",
@@ -44,7 +46,7 @@ export function Home(){
           // console.log("2", response.data.choices);
           // console.log("3", response.data.choices[0]);
           // console.log("4", response.data.choices[0].message);
-          // console.log("5", response.data.choices[0].message.content);
+            console.log("5", response.data.choices[0].message.content);
   
           setRes(response.data.choices[0].message.content);
   
@@ -69,10 +71,10 @@ export function Home(){
     
           <div className="flex-1">      
               <NavBar />
-              <Query input={input} />
-              <Top message={res} setInput={setInput} />
-             <Speak setInput={setInput} />
-             <ImageText setInput={setInput} />
+               <Query input={input} />
+               <Top message={res} setInput={setInput} />
+               <Speak setInput={setInput} />
+              <ImageText setInput={setInput} />
           </div>
     
         </div>
