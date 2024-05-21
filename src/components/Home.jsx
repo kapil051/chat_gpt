@@ -67,12 +67,12 @@ export function Home(){
             <Side />
           </div>
     
-          <div className="flex-1">
-            <NavBar />
-            <Query input={input} />
-            <Top message={res} setInput={setInput} />
-            <Speak setInput={setInput} />
-            <ImageText setInput={setInput} />
+          <div className="flex-1">      
+              <NavBar />
+              <Query input={input} />
+              <Top message={res} setInput={setInput} />
+             <Speak setInput={setInput} />
+             <ImageText setInput={setInput} />
           </div>
     
         </div>

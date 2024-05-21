@@ -1,4 +1,3 @@
-
 import { Side } from "./Side"
 import { WorkNav } from "./WorkNav"
 import { InfoInput } from "./InfoInput"
@@ -8,8 +7,7 @@ import { useState } from "react"
 
 export function ComponyNor() {
 
-         const [input,setInput]=useState("BEL");
-
+         const [input,setInput]=useState("");
 
     return (
 
@@ -22,10 +20,15 @@ export function ComponyNor() {
             <div className="flex-1">
                  
                 <WorkNav heading={"Workflows/Company Research Enrichment"}></WorkNav>
+
                 <div className=" text-xl mt-6 ml-6">Run workflow.</div>
+
                 <div className="mt-2 ml-6">Fill in the input to kick off your workflow.</div>
+
                  <InfoInput setInput={setInput} ></InfoInput>
+
                  <InfoOutput input={input} ></InfoOutput>
+                 
             </div>
 
         </div>

@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 export function Top({ message, setInput }) {
 
-    const [temp, setTemp] = useState("");
+       const [temp, setTemp] = useState("");
 
     return (
         <div>

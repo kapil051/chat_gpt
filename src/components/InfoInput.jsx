@@ -1,8 +1,7 @@
-
-
 import { useEffect, useState } from "react"
 
 export function InfoInput({ setInput }) {
+
     const [temp, setTemp] = useState("");
 
     return (
@@ -13,18 +12,22 @@ export function InfoInput({ setInput }) {
             </div>
             <div className="mb-1 font-medium text-gray-700">COMPANY NAME</div>
             <div className="mb-4 text-sm text-gray-500">The Name Of The Company To Research</div>
+
             <input 
                 onChange={(e) => setTemp(e.target.value)} 
                 className="mb-4 p-2 border border-gray-300 rounded-md w-full focus:outline-none focus:border-indigo-500" 
                 type="text" 
                 placeholder="Enter company name"
             />
+
             <button 
                 onClick={() => setInput(temp)} 
                 className="py-2 bg-indigo-500 text-white rounded-md w-full hover:bg-indigo-600 transition-all duration-300"
             >
                 Run Workflow
             </button>
+
+            
         </div>
     );
 }

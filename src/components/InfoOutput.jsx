@@ -3,6 +3,7 @@ import axios from "axios";
 import { CompanyInfo } from "./ComponyInfo";
 
 export function InfoOutput({ input }) {
+    
     const [newsData, setNewsData] = useState([]);
     const key = "b6e37a974ece438f919ac87dedb9adc0";
 
@@ -42,4 +43,5 @@ export function InfoOutput({ input }) {
 
         </div>
     );
+
 }

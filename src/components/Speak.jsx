@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useSpeechRecognition } from 'react-speech-kit';
 
 export function Speak({ setInput }) {
+    
     const [value, setValue] = useState('');
 
     const { listen, listening, stop } = useSpeechRecognition({
@@ -11,11 +12,12 @@ export function Speak({ setInput }) {
     });
 
     const handleMouseUp = () => {
-        stop();
+          stop();
         setInput(value);
     };
 
     return (
+        
         <div className='flex gap-2 mt-2 '>
            
                 <input
@@ -25,7 +27,6 @@ export function Speak({ setInput }) {
                     readOnly
                 />
             
-
             
                 <button
                     onMouseDown={listen}
@@ -35,7 +36,7 @@ export function Speak({ setInput }) {
                     {listening ? '🎤 Listening...' : '🎤 Press and Hold to Speak'}
                 </button>
            
-
         </div>
+
     );
 }
