@@ -1,6 +1,8 @@
 
 import React from 'react';
 
+
+
 export function NavBar() {
     return (
 
@@ -8,8 +10,9 @@ export function NavBar() {
 
             <div className=' flex gap-1'>
                 <img className='' src="../src/images/gptLogo.svg" alt="" />
-                <h1 className="text-2xl font-semibold mt-1"> ChatMate</h1>
+                <h1 className="text-2xl font-semibold mt-1"> ChatMate</h1>      
             </div>
+
 
         </div>
 

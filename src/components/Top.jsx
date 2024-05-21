@@ -1,4 +1,4 @@
-import React, { useState,useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import { jsPDF } from "jspdf";
 
 export function Top({ message, setInput }) {
@@ -27,8 +27,32 @@ export function Top({ message, setInput }) {
 
         pdf.text(textLines, margin, startY);
 
-        pdf.save("output.pdf"); 
+        pdf.save("output.pdf");
     };
+
+    ///////////////////////////////////////////////////
+
+
+    const [language, setLanguage] = useState('en-US');
+
+
+    const handleSpeak = () => {
+        const textarea = textareaRef.current;
+        const text = textarea.innerText.trim(); // Use innerText to get text content
+        if ('speechSynthesis' in window) {
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = language;
+            speechSynthesis.speak(utterance);
+        } else {
+            alert('Speech synthesis is not supported in your browser.');
+        }
+    };
+
+
+
+    ////////////////////////////////////////////////////
+
+
 
     return (
         <div>
@@ -37,9 +61,31 @@ export function Top({ message, setInput }) {
                 <div ref={textareaRef} className="text-lg font-bold hover:text-blue-200">{message}</div>
             </div>
 
-            <button onClick={handleSubmit} className="bg-indigo-400 text-white px-4 py-2 rounded-lg hover:bg-indigo-500 transition duration-300 mb-4">
-                Generate PDF
-            </button>
+            <div className=' flex gap-20' >
+
+                <button onClick={handleSubmit} className="bg-indigo-400 text-white px-4 py-2 rounded-lg hover:bg-indigo-500 transition duration-300 mb-4">
+                    Generate PDF
+                </button>
+
+                <button onClick={handleSpeak} className="bg-indigo-400 text-white px-4 py-2 rounded-lg hover:bg-indigo-500 transition duration-300 mb-4">
+                    Speak
+                </button>
+
+                <select
+                    className="border border-gray-300 rounded-lg focus:outline-none focus:ring focus:border-blue-300"
+                    value={language}
+                    onChange={(e) => setLanguage(e.target.value)}
+                >
+                    <option value="en-US">English</option>
+                    <option value="hi-IN">Hindi</option>
+                    <option value="es-ES">Spanish</option>
+                </select>
+
+
+
+            </div>
+
+
 
             <div className='flex'>
                 <input
