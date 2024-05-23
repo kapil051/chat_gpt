@@ -57,7 +57,7 @@ export function Top({ message, setInput }) {
     return (
         <div>
             <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white p-4 rounded-lg shadow-lg hover:shadow-xl transition duration-300 mb-4">
-                <div className="text-lg font-bold hover:text-blue-200">Responce:</div>
+                <div className="text-lg font-bold hover:text-blue-200">Response:</div>
                 <div ref={textareaRef} className="text-lg font-bold hover:text-blue-200">{message}</div>
             </div>
 

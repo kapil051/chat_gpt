@@ -8,15 +8,21 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 
 
+  //65ca0b0e03msh85442997c0250c2p1b6698jsn1c23ec0148af
+
+
 export function Home() {
 
      
 // मैं आपकी किसी भी तरह से मदद कर सकता हूँ। यदि आपको किसी विषय पर जानकारी चाहिए, कोई सवाल हो, या कोई समस्या हो, तो बताएं, मैं आपकी सहायता के लिए यहाँ हूँ। आप जो भी चाहें, मुझसे पूछ सकते हैं
 
-  const [res, setRes] = useState("मैं आपकी किसी भी तरह से मदद कर सकता हूँ। यदि आपको किसी विषय पर जानकारी चाहिए, कोई सवाल हो, या कोई समस्या हो, तो बताएं, मैं आपकी सहायता के लिए यहाँ हूँ। आप जो भी चाहें, मुझसे पूछ सकते हैं");
-    const [input, setInput] = useState("type your query!!!");
+   
+     const [input, setInput] = useState("type your query!!!");
+     const [res, setRes] = useState("hello how can i help you!!!!");
 
   // 79ae641156msha263db6ffee6e3ep195297jsn33ec6df2e5c9
+
+    //8cbca8fe6fmshdd91d0eb1aa1939p1fb444jsn07d2da422234
 
   const options = {
     method: "POST",
@@ -24,7 +30,7 @@ export function Home() {
     headers: {
       "content-type": "application/json",
       "Content-Type": "application/json",
-      "X-RapidAPI-Key": '8cbca8fe6fmshdd91d0eb1aa1939p1fb444jsn07d2da422234',
+      "X-RapidAPI-Key": '79ae641156msha263db6ffee6e3ep195297jsn33ec6df2e5c9',
       "X-RapidAPI-Host": 'chat-gpt26.p.rapidapi.com',
     },
     data: {
@@ -60,7 +66,7 @@ export function Home() {
 
     }
 
-    // get_data();
+  // get_data();
 
   }, [input])
 
