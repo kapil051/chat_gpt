@@ -1,8 +1,13 @@
 
 import React, { useState } from 'react';
 import NavBar from './NavBar';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 export function Signin() {
+
+    const navigate = useNavigate();
+
     const [formData, setFormData] = useState({
         email: '',
         password: ''
@@ -17,8 +22,45 @@ export function Signin() {
     };
 
     const handleSubmit = () => {
-        // Handle form submission logic here
-        console.log('Form Data:', formData);
+       // console.log('Form Data:', formData);
+
+
+        async function sign_up() {
+
+            try {
+
+                const res = await axios.post("http://localhost:3000/user/signin", {
+                    email: formData.email,
+                    password: formData.password,
+                });
+
+                 if(res.data.user_found==null){
+                     alert("enter valid email or passwaord");
+                 } else{
+
+                    const token = res.data.token;
+                    const userName = `${formData.firstName} ${formData.lastName}`;
+    
+                    if (token) {
+                        localStorage.setItem('token', token);
+                        localStorage.setItem('name', userName);
+                        navigate('/home');
+                    } else {
+                        navigate('/signup');
+                    }
+
+                 }
+
+
+            } catch (e) {
+                console.error("error while sign in", e)
+            }
+
+        }
+
+
+        sign_up();
+
     };
 
     return (

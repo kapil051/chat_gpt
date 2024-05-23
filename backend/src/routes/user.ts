@@ -79,7 +79,7 @@ router.post("/signin", async (req, res) => {
           } else {
 
                const user_found = await prisma.user.findFirst({
-                    where: body,
+                      where: body,
                })
 
                if (user_found != null) {
@@ -90,7 +90,7 @@ router.post("/signin", async (req, res) => {
                     })
                } else {
                     return res.json({
-                         user_found,
+                           user_found,
                          "msg": "no valid user for this email and password"
                     })
                }

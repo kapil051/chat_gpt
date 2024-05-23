@@ -5,6 +5,8 @@ import { Workflows } from './components/WorkFlows';
 import { ComponyNor } from './components/ComponyNor';
 import { Signup } from './components/Signup';
 import { Signin } from './components/Signin';
+import { StartPage } from './components/StartPage';
+
 
 
 export default function App() {
@@ -12,7 +14,7 @@ export default function App() {
   return (
     <div>
     <Routes>
-
+       <Route path="/" element={<StartPage />} />
       <Route path="/home" element={<Home />} />
       <Route path="/Signup" element={<Signup />} />
       <Route path="/Signin" element={<Signin />} />
